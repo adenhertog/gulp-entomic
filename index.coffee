@@ -19,12 +19,13 @@ gulpEntomic = (options) ->
 
 	entomic = new Entomic(options)
 
-	getFiles = (files, outputDir) -> 
+	getFiles = (resources, outputDir) -> 
 		result = []
-		for filepath in files
+		for resource in resources
+			filepath = path.join options.componentPath, resource.library, resource.component || "", resource.path
 			file = vinylFile.readSync filepath
-			filename = path.basename file.path
-			file.path = path.join outputDir, filename
+			filename = path.basename resource.path
+			file.path = path.join outputDir, resource.library, resource.component || "", filename
 			result.push file
 
 		return result

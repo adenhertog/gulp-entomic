@@ -26,14 +26,15 @@ gulpEntomic = function(options) {
   };
   setDefaults();
   entomic = new Entomic(options);
-  getFiles = function(files, outputDir) {
-    var file, filename, filepath, i, len, result;
+  getFiles = function(resources, outputDir) {
+    var file, filename, filepath, i, len, resource, result;
     result = [];
-    for (i = 0, len = files.length; i < len; i++) {
-      filepath = files[i];
+    for (i = 0, len = resources.length; i < len; i++) {
+      resource = resources[i];
+      filepath = path.join(options.componentPath, resource.library, resource.component || "", resource.path);
       file = vinylFile.readSync(filepath);
-      filename = path.basename(file.path);
-      file.path = path.join(outputDir, filename);
+      filename = path.basename(resource.path);
+      file.path = path.join(outputDir, resource.library, resource.component || "", filename);
       result.push(file);
     }
     return result;

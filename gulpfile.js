@@ -39,6 +39,6 @@ gulp.task("test", ["compile"], function () {
 gulp.task("mock", function(){
 	return gulp.src("./test/fixtures/*.html")
 		.pipe(plumber())
-		.pipe(entomic({ componentPath: "./test/fixtures/components", stylePath: "andrew" }))
+		.pipe(entomic({ componentPath: "./test/fixtures/components" }))
 		.pipe(gulp.dest(TEST));
 });

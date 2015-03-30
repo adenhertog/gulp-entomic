@@ -33,7 +33,7 @@ describe "gulp-entomic", ->
 					if done and !expected.length then done.call this
 
 
-		it "should transform a basic HTML file", (done) -> 
+		xit "should transform a basic HTML file", (done) -> 
 			filepath = "/test/basic.html"
 			contents = new Buffer '''<html>
 		<body>

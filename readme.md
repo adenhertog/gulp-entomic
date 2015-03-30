@@ -19,26 +19,26 @@ gulp.task('entomic', function(){
 
 Folder path where entomic components are located.
 
-Type: `String`
-Default: `node_modules`
+Type: `String`  
+Default: `node_modules`  
 
 #### options.stylePath
 
 Output path to place styles.
 
-Type: `String`
-Default: `style`
+Type: `String`  
+Default: `style`  
 
 #### options.scriptPath
 
 Output path to place scripts.
 
-Type: `String`
-Default: `script`
+Type: `String`  
+Default: `script`  
 
 #### options.assetPath
 
 Output path to place assets.
 
-Type: `String`
-Default: `asset`
+Type: `String`  
+Default: `asset`  

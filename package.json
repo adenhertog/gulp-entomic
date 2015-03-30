@@ -19,7 +19,7 @@
     },
     "license": "MIT",
     "dependencies": {
-        "entomic": "0.0.7",
+        "entomic": "0.0.9",
         "gulp-util": "^3.0.4",
         "through2": "^0.6.3",
         "vinyl-file": "^1.1.1"

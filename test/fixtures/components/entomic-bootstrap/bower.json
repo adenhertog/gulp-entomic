@@ -1,41 +1,49 @@
 ﻿{
-	"name": "entomic-bootstrap",
-	"version": "0.0.1",
-	"description": "an html template that depends on bootstrap",
+    "name": "entomic-bootstrap",
+    "version": "0.0.1",
+    "description": "an html template that depends on bootstrap",
 
-	"dependencies": {
-		"bootstrap": "~3.3.2"
-	},
+    "dependencies": {
+        "bootstrap": "~3.3.2",
+        "bootstrap-ui": "~3.3.2"
+    },
 
-	"entomic": {
+    "entomic": {
 
-		"styles": ["bootstrap.css"],
+        "styles": [ "entomic-bootstrap.css" ],
+        "scripts": [ "entomic-bootstrap.js" ],
 
-		"components": [
-			{
-				"name": "bootstrap-titlebar",
-				"template": "titlebar/template.html",
-				"model": 
-				{
-					"title": {
-						"type": "text",
-						"description": "title to insert"
-					},
-					"required": ["title"]
-				}
-			},
-			{
-				"name": "bootstrap-navigation",
-				"template": "navigation/template.html",
-				"model": 
-				{
-					"link": {
-						"type": "text",
-						"description": "link to insert"
-					},
-					"required": ["link"]
-				}
-			}
-		]
-	}
+        "dependencies": [
+            {
+                "name": "bootstrap",
+                "styles": [ "dist/bootstrap.css" ],
+                "scripts": [ "dist/bootstrap.js" ]
+            }
+        ],
+        "components": [
+            {
+                "name": "bootstrap-titlebar",
+                "template": "titlebar/template.html",
+                "model": {
+                    "title": {
+                        "type": "text",
+                        "description": "title to insert"
+                    },
+                    "required": [ "title" ]
+                }
+            },
+            {
+                "name": "bootstrap-navigation",
+                "template": "navigation/template.html",
+                "styles": [ "style.css" ],
+                "model": {
+                    "link": {
+                        "type": "text",
+                        "description": "link to insert"
+                    },
+                    "required": [ "link" ]
+                }
+            }
+        ]
+    }
 }
