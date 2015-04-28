@@ -4,7 +4,7 @@ defaults = {
   scriptPath: "script",
   stylePath: "style",
   assetPath: "asset",
-  componentPath: "component"
+  componentPath: "node_modules"
 };
 
 module.exports = defaults;
