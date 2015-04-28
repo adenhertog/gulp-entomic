@@ -1,6 +1,6 @@
 {
     "name": "gulp-entomic",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A gulp plugin for the Entomic templating engine",
     "main": "./index.js",
     "author": "Andrew den Hertog",
@@ -19,7 +19,7 @@
     },
     "license": "MIT",
     "dependencies": {
-        "entomic": "0.0.9",
+        "entomic": "0.0.10",
         "gulp-util": "^3.0.4",
         "through2": "^0.6.3",
         "vinyl-file": "^1.1.1"
